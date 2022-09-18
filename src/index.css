@@ -26,7 +26,7 @@
   color: #4b00ff;
 }
 
-.app .task-row {
+.app .item-row {
 border: 2px solid #eee;
 padding: 6px 10px;
 font-size: 18px;
@@ -39,13 +39,13 @@ align-items: center;
 justify-content: space-between;
 }
 
-.app .task-row .icon {
+.app .item-row .icon {
   font-size: 25px;
   color: #4b00ff;
   cursor: pointer;
 }
 
-.app .task-row p {
+.app .item-row p {
   text-transform: capitalize;
 }
 
@@ -99,6 +99,8 @@ button {
   text-align: center;
   margin: 1rem 0 1rem 0;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .date p {

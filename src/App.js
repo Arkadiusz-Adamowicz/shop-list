@@ -6,34 +6,34 @@ import { v4 as uuidv4 } from 'uuid';
 import dateFormat from 'dateformat';
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [items, setItems] = useState([]);
   const [input, setInput] = useState('');
 
   //add tasks
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newTask = {
+    const newItem = {
       id: uuidv4(),
       text: input,
       isComplete: false,
     };
-    console.log(newTask);
-    setTasks([...tasks, newTask]);
+    console.log(newItem);
+    setItems([...items, newItem]);
     setInput('');
   };
 
   // delete tasks
-  const deleteTask = (id) => {
-    let filteredTasks = [...tasks].filter((task) => task.id !== id);
-    setTasks(filteredTasks);
+  const deleteItem = (id) => {
+    let filteredItems = [...items].filter((item) => item.id !== id);
+    setItems(filteredItems);
     console.log('task deleted');
   };
 
   // toggle completed task
   const toggleComplete = (id) => {
-    setTasks(
-      tasks.map((task) =>
-        task.id === id ? { ...task, completed: !task.completed } : task
+    setItems(
+      items.map((item) =>
+        item.id === id ? { ...item, completed: !item.completed } : item
       )
     );
   };
@@ -59,21 +59,21 @@ function App() {
             onChange={(e) => setInput(e.target.value)}
             value={input}
             type='text'
-            placeholder='Enter a task'
+            placeholder='Enter an item'
           />
           </div>
         </form>
         <div>
-          {tasks.map((task) => (
-            <div className={`task-row ${task.completed ? 'completed' : ''}`}  key={task.id} onDoubleClick={() => toggleComplete(task.id)}>
+          {items.map((item) => (
+            <div className={`item-row ${item.completed ? 'completed' : ''}`}  key={item.id} onDoubleClick={() => toggleComplete(item.id)}>
               <p>
-                {task.text}
+                {item.text}
               </p>
-                <RiDeleteBinLine className='icon' onClick={() => deleteTask(task.id)}/>
+                <RiDeleteBinLine className='icon' onClick={() => deleteItem(item.id)}/>
             </div>
           ))}
         </div>
-        <p className='counter'>{(tasks < 1 ) ? 'You have no tasks' : `Tasks: ${tasks.length}`}</p>
+        <p className='counter'>{(items < 1 ) ? 'You have no items in basket' : `Items: ${items.length}`}</p>
         </div>
       </div>
     </div>
