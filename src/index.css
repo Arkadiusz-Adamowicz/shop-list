@@ -11,6 +11,7 @@
 .app {
   max-width: 400px;
   margin: auto;
+  padding: 0  1.5rem; 
 }
 
 .app .form-input {
@@ -109,6 +110,6 @@ button {
   border-radius: 8px;
   background-color: #4b00ff;
   color: #fff;
-  margin-top: 5px;
+  margin-top: 1rem;
   padding: 3px 0;
 }
