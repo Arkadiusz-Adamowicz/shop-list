@@ -20,8 +20,8 @@
 
 .app .form-input .icon {
   position: absolute;
-  left: 12px;
-  top: 5px;
+  left: 10px;
+  top: 10px;
   font-size: 25px;
   color: #4b00ff;
 }
@@ -79,6 +79,10 @@ span {
   width: 100%; 
 }
 
+.app .form-input input {
+  padding: 6px 40px;
+}
+
 input:focus {
   outline: none;
 }
@@ -97,6 +101,8 @@ button {
 
 .date { 
   text-align: center;
+  color: #4b00ff;
+  font-weight: 500;
   margin: 1rem 0 1rem 0;
   display: flex;
   align-items: center;
@@ -113,5 +119,5 @@ button {
   background-color: #4b00ff;
   color: #fff;
   margin-top: 1rem;
-  padding: 3px 0;
+  padding: 5px 0;
 }
