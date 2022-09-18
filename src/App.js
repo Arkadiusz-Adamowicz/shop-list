@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaShoppingBasket } from 'react-icons/fa';
-import { AiOutlinePlus, AiOutlineClose } from 'react-icons/ai';
+import { AiOutlinePlus } from 'react-icons/ai';
 import { RiDeleteBinLine } from 'react-icons/ri'
 import { v4 as uuidv4 } from 'uuid';
 import dateFormat from 'dateformat';
